@@ -12,8 +12,7 @@ from torch.utils.data import Dataset, DataLoader
 
 jieba.setLogLevel(log_level=0)
 
-sys.path.insert(0, "../")
-from ChineseClassification.PublicConfig import *
+from PublicConfig import PublicConfig
 
 public_config = PublicConfig()
 
@@ -107,4 +106,6 @@ def get_embedding(config, dim=300):
     np.savez_compressed(public_config.out_embedding_path, embeddings=embedding_array)
 
 if __name__ == "__main__":
+    if not os_exists("models"):
+        os.mkdir("models")
     get_embedding(public_config)

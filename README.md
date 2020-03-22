@@ -2,7 +2,7 @@
 summary of chinese classification.
 
 ##### 1. TextCNN文本分类
-1.1 先下载300维的[知乎词向量](https://github.com/Embedding/Chinese-Word-Vectors)，放在项目根目录，执行utils.py生成需要用到的词向量
+1.1 先下载300维的[知乎词向量](https://github.com/Embedding/Chinese-Word-Vectors)，放在项目根目录，执行utils.py生成需要用到的词向量和存放模型的models目录
 
 1.2 去掉TextCNN.py的main函数里面的train前面的注释
 
